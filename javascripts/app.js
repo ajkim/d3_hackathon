@@ -28,7 +28,6 @@ var svg = d3.select("body").append("svg")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
 
-
   node.append("title")
       .text(function(d) { 
         return d.className + ": " + format(d.value); 
@@ -51,7 +50,7 @@ var svg = d3.select("body").append("svg")
       })
       .style("fill", function(d) { return color(d.packageName); });
 
-      node.exit().remove();
+
 
 
   var renderText = function(){
@@ -69,12 +68,14 @@ var svg = d3.select("body").append("svg")
       .attr("opacity", 1)
 
 
+
       var tooltip = d3.select("circle")
       .append("div")
       .style("position", "absolute")
       .style("z-index", "10")
       .style("visibility", "hidden")
       .text("hello");
+
   
   }
 
@@ -82,8 +83,6 @@ var svg = d3.select("body").append("svg")
 
 }
       
-
-   
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
 function classes(root) {
@@ -102,6 +101,15 @@ function classes(root) {
 d3.select(self.frameElement).style("height", diameter + "px");
 
 dthreeFunc(companies);
+
+// svg.exit().remove();
+// dthreeFunc(testindustry);
+
+
+// function reRender(){
+// node.exit().remove()
+// dthreeFunc(testindustry);
+// }
 
 //need to run this function on submit:
 // dthreeFunc(subCompaniesVariable(STRING FROM DROPDOWN));
