@@ -2541,24 +2541,6 @@ var companies = {
                             "rounds": "4",
                             "founded": "2004",
                             "last_funded": "02-11"
-                        },
-                        {
-                            "name": "Tamra-Tacoma Capital Partners",
-                            "size": "535000000",
-                            "url": "http://www.tamratacoma.com",
-                            "category": "cleantech",
-                            "rounds": "4",
-                            "founded": "2012",
-                            "last_funded": "01-13"
-                        },
-                        {
-                            "name": "Terra-Gen Power",
-                            "size": "1200000000",
-                            "url": "http://www.terra-genpower.com",
-                            "category": "cleantech",
-                            "rounds": "1",
-                            "founded": "",
-                            "last_funded": "07-10"
                         }
                     ]
                 },
@@ -3753,15 +3735,6 @@ var companies = {
                             "rounds": "7",
                             "founded": "2009",
                             "last_funded": "11-13"
-                        },
-                        {
-                            "name": "Barnes & Noble",
-                            "size": "300000000",
-                            "url": "http://www.barnesandnobleinc.com",
-                            "category": "ecommerce",
-                            "rounds": "1",
-                            "founded": "1917",
-                            "last_funded": "04-12"
                         },
                         {
                             "name": "Fab.com",
@@ -6767,24 +6740,6 @@ var companies = {
                             "rounds": "12",
                             "founded": "2002",
                             "last_funded": "09-12"
-                        },
-                        {
-                            "name": "OPE GEDC Holdings",
-                            "size": "211459196",
-                            "url": "",
-                            "category": "health",
-                            "rounds": "1",
-                            "founded": "2011",
-                            "last_funded": "10-11"
-                        },
-                        {
-                            "name": "sigmacare",
-                            "size": "2600000000",
-                            "url": "http://sigmacare.com",
-                            "category": "health",
-                            "rounds": "1",
-                            "founded": "2005",
-                            "last_funded": "07-13"
                         }
                     ]
                 },
@@ -8182,15 +8137,6 @@ var companies = {
                             "rounds": "2",
                             "founded": "",
                             "last_funded": "12-12"
-                        },
-                        {
-                            "name": "Verizon Communications, Inc.",
-                            "size": "4985050000",
-                            "url": "http://www.verizon.com",
-                            "category": "mobile",
-                            "rounds": "3",
-                            "founded": "",
-                            "last_funded": "03-12"
                         }
                     ]
                 },
@@ -9302,15 +9248,6 @@ var companies = {
                             "rounds": "1",
                             "founded": "2005",
                             "last_funded": "06-13"
-                        },
-                        {
-                            "name": "Rouse Properties",
-                            "size": "510000000",
-                            "url": "http://rouseproperties.com",
-                            "category": "real_estate",
-                            "rounds": "1",
-                            "founded": "2012",
-                            "last_funded": "11-13"
                         }
                     ]
                 },
