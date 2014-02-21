@@ -1,5 +1,3 @@
-<script>
-
 var diameter = 960,
     format = d3.format(",d"),
     color = d3.scale.category20();
@@ -88,5 +86,3 @@ d3.selectAll('node').selectAll(".node").on('mouseover', function(){
 })
 };
 
-
-</script>
