@@ -57,7 +57,12 @@ var svg = d3.select("body").append("svg")
       // .on('click', function(d) {
       //     document.location.href = d.url;
       // })
-        var please = this;
+      var tooltip = d3.select("this")
+      .append("div")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("visibility", "hidden")
+      .text("a simple tooltip");
         return d.r;
       })
       .style("fill", function(d) { return color(d.packageName); })
@@ -67,14 +72,13 @@ var svg = d3.select("body").append("svg")
     // .on("click", function(d) {
     //     document.location.href = d.url;
     // });
-      ;
+    ;      
+      // .on("mouseenter", function() { d3.select(please).attr("opacity", .5); })
+      // .on("mouseleave", function() { d3.select(please).attr("opacity", 1); })
+      // .on('click', function(d) {
+      //     document.location.href = d.url;
+      // });
 
-      node.append
-      .on("mouseenter", function() { d3.select(please).attr("opacity", .5); })
-      .on("mouseleave", function() { d3.select(please).attr("opacity", 1); })
-      .on('click', function(d) {
-          document.location.href = d.url;
-      })
 
 
   node.append("text")
