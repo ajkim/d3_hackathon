@@ -1,3 +1,18 @@
+var subCompaniesVariable = function(industry){
+    var selectionInd = _.where(companies.children[0].children, {name: industry});
+    // console.log(JSON.stringify(selectionInd[0]));
+    var subCompanies = {
+    "name": "flare",
+    "children": [
+            {
+                "name": "analytics",
+                "children": [selectionInd]
+            }
+        ]
+    }
+    return subCompanies
+}
+
 var companies = {
     "name": "flare",
     "children": [
