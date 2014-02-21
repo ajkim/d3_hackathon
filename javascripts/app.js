@@ -19,14 +19,19 @@ var svg = d3.select("body").append("svg")
  var dthreeFunc = function(root) 
  {
 
+
   var node = svg.selectAll(".node")
       .data(bubble.nodes(classes(root))
       .filter(function(d) { return !d.children; }))
     .enter().append("g")
       .attr("class", "node")
       .attr("style", function(d) { return d.className.substring(0, d.r / 3); })
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
 
+  var excessCircles = svg.selectAll(".node")
+      .data(bubble.nodes(classes(root))
+      .filter(function(d) { return !d.children; }))
+      .exit().remove("g")
 
   node.append("title")
       .text(function(d) { 
