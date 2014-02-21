@@ -45,10 +45,7 @@ var svg = d3.select("body").append("svg")
       { 
         return d.r;
       })
-      .style("fill", function(d) { return color(d.packageName); })
-      ;
-
-
+      .style("fill", function(d) { return color(d.packageName); });
 
   node.append("text")
       .attr("dy", ".3em")
@@ -63,9 +60,7 @@ var svg = d3.select("body").append("svg")
       .style("z-index", "10")
       .style("visibility", "hidden")
       .text("hello");
-}
-      ;
-
+};
    
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
@@ -91,5 +86,6 @@ d3.selectAll('node').selectAll(".node").on('mouseover', function(){
   console.log('this');
 })
 };
+
 
 
