@@ -7,7 +7,7 @@ var subCompaniesVariable = function(industry){
     "children": [
             {
                 "name": "analytics",
-                "children": [selectionInd]
+                "children": selectionInd
             }
         ]
     }
