@@ -81,6 +81,9 @@ d3.select(self.frameElement).style("height", diameter + "px");
 
 dthreeFunc(companies);
 
+//need to run this function on submit:
+dthreeFunc(subCompaniesVariable(STRING FROM DROPDOWN));
+
 function bindClickEvents(){
 d3.selectAll('node').selectAll(".node").on('mouseover', function(){
   console.log('this');
