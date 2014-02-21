@@ -32,35 +32,18 @@ var svg = d3.select("body").append("svg")
 
   node.append("circle")
       .attr("r", 0)
+      .on("mouseenter", function() { d3.select(this).attr("opacity", .5); })
+      .on("mouseleave", function() { d3.select(this).attr("opacity", 1); })
+      .on('click', function(d) {
+          document.location.href = d.url;
+        })
       .transition()
       .duration(3000)
-      .attr("r", function(d) { 
-      // .on("mouseenter", function(d) { d3.select(self).attr("opacity", .5); })
-      // .on("mouseleave", function(d) { d3.select(self).attr("opacity", 1); })
-      // .on('click', function(d) {
-      //     document.location.href = d.url;
-      // })
-      var tooltip = d3.select("this")
-      .append("div")
-      .style("position", "absolute")
-      .style("z-index", "10")
-      .style("visibility", "hidden")
-      .text("a simple tooltip");
+      .attr("r", function(d) 
+      { 
         return d.r;
       })
       .style("fill", function(d) { return color(d.packageName); })
-
-    // .attr("r", function(d) { return d.r; })
-    // .style("fill", function(d) { return fill(d.packageName); })
-    // .on("click", function(d) {
-    //     document.location.href = d.url;
-    // });
-         
-      .on("mouseenter", function() { return tooltip.style("opacity", .5); })
-      .on("mouseleave", function() { return tooltip.style("opacity", 1); })
-      .on('click', function(d) {
-          document.location.href = d.url;
-      });
       ;
 
 
@@ -68,16 +51,20 @@ var svg = d3.select("body").append("svg")
   node.append("text")
       .attr("dy", ".3em")
       .style("text-anchor", "middle")
-      // .on("mouseenter", function() { d3.select(this).attr("opacity", .5); })
-      // .on("mouseleave", function() { d3.select(this).attr("opacity", 1); })
-      .on('click', function(d) {
-          document.location.href = d.url;
-      })
       .text(function(d) { return d.className.substring(0, d.r / 3); })
       // .transition()
       // .duration(5000);
+
+      var tooltip = d3.select("circle")
+      .append("div")
+      .style("position", "absolute")
+      .style("z-index", "10")
+      .style("visibility", "hidden")
+      .text("hello");
 }
       ;
+
+   
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
 function classes(root) {
