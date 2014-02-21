@@ -18,17 +18,21 @@ var svg = d3.select("body").append("svg")
 
  var dthreeFunc = function(root) 
  {
+
   var node = svg.selectAll(".node")
       .data(bubble.nodes(classes(root))
       .filter(function(d) { return !d.children; }))
     .enter().append("g")
       .attr("class", "node")
+      .attr("style", function(d) { return d.className.substring(0, d.r / 3); })
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
 
 
   node.append("title")
-      .text(function(d) { return d.className + ": " + format(d.value); });
+      .text(function(d) { 
+        return d.className + ": " + format(d.value); 
+      });
       //transitioning radius from 0 to full here
       //where on mouseover-ing it will hover opacity and allow you to clickthru to site url
 
@@ -49,13 +53,17 @@ var svg = d3.select("body").append("svg")
       ;
 
 
-
-  node.append("text")
+  var renderText = function(){
+      node.append("text")
       .attr("dy", ".3em")
+      .attr("opacity", 0)
       .style("text-anchor", "middle")
-      .text(function(d) { return d.className.substring(0, d.r / 3); })
-      // .transition()
-      // .duration(5000);
+      .text(function(d) { 
+        return d.className.substring(0, d.r / 7); 
+      })
+      .transition()
+      .attr("opacity", 1)
+
 
       var tooltip = d3.select("circle")
       .append("div")
@@ -63,8 +71,13 @@ var svg = d3.select("body").append("svg")
       .style("z-index", "10")
       .style("visibility", "hidden")
       .text("hello");
+  
+  }
+
+  setTimeout(renderText, 2000);  
+
 }
-      ;
+      
 
    
 
@@ -92,4 +105,5 @@ d3.selectAll('node').selectAll(".node").on('mouseover', function(){
 })
 };
 
+//companies[name][name]["called"]
 
