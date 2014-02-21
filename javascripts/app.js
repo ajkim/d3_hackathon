@@ -40,12 +40,12 @@ var svg = d3.select("body").append("svg")
       // .on('click', function(d) {
       //     document.location.href = d.url;
       // })
-      var tooltip = d3.select("this")
-      .append("div")
-      .style("position", "absolute")
-      .style("z-index", "10")
-      .style("visibility", "hidden")
-      .text("a simple tooltip");
+      // var tooltip = d3.select("this")
+      // .append("div")
+      // .style("position", "absolute")
+      // .style("z-index", "10")
+      // .style("visibility", "hidden")
+      // .text("a simple tooltip");
         return d.r;
       })
       .style("fill", function(d) { return color(d.packageName); })
@@ -56,11 +56,11 @@ var svg = d3.select("body").append("svg")
     //     document.location.href = d.url;
     // });
          
-      .on("mouseenter", function() { return tooltip.style("opacity", .5); })
-      .on("mouseleave", function() { return tooltip.style("opacity", 1); })
-      .on('click', function(d) {
-          document.location.href = d.url;
-      });
+      // .on("mouseenter", function() { return tooltip.style("opacity", .5); })
+      // .on("mouseleave", function() { return tooltip.style("opacity", 1); })
+      // .on('click', function(d) {
+      //     document.location.href = d.url;
+      // });
       ;
 
 

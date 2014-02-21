@@ -1,4 +1,44 @@
+body {
+	background-color: #F5F5F5;
+}
+
 text {
   font: 12px sans-serif;
 
 }
+
+#key {
+	position: fixed;
+	height: 100px;
+	width: 150px;
+	z-index: 1;
+	background-color: #F0F8FF;
+	border-radius: 2px;
+	top: 0;
+    left: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+   	padding: 10px;
+   	box-shadow: 10px 10px 5px #C0C0C0;
+}
+
+h6 {
+	font-family: Helvetica, sans-serif;
+	margin-left: 10px;
+}
+
+
+select {
+	width: 135px;
+	z-index: 1;
+	background-color: white;
+/*	border: solid black;*/
+	top: 0;
+    left: 0;
+    margin-left: 10px;	
+} 
+
+button {
+	margin-left: 10px;
+}
+
