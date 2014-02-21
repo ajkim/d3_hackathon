@@ -49,8 +49,7 @@ var svg = d3.select("body").append("svg")
       { 
         return d.r;
       })
-      .style("fill", function(d) { return color(d.packageName); })
-      ;
+      .style("fill", function(d) { return color(d.packageName); });
 
       node.exit().remove();
 

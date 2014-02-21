@@ -13,6 +13,93 @@ var subCompaniesVariable = function(industry){
     return subCompanies
 }
 
+var testindustry = {
+    "name": "flare",
+    "children": [
+            {
+                "name": "analytics",
+                "children": [
+{
+                    "name": "design",
+                    "children": [
+                        {
+                            "name": "Designer Pages Online",
+                            "size": "350000",
+                            "url": "http://www.designerpages.com",
+                            "category": "design",
+                            "rounds": "1",
+                            "founded": "2008",
+                            "last_funded": "12-06"
+                        },
+                        {
+                            "name": "Gertrude",
+                            "size": "750000",
+                            "url": "http://www.gertrude.co",
+                            "category": "design",
+                            "rounds": "1",
+                            "founded": "2012",
+                            "last_funded": "11-13"
+                        },
+                        {
+                            "name": "makr",
+                            "size": "865000",
+                            "url": "http://makrplace.com",
+                            "category": "design",
+                            "rounds": "1",
+                            "founded": "",
+                            "last_funded": "11-13"
+                        },
+                        {
+                            "name": "Creativit Studios",
+                            "size": "1500000",
+                            "url": "http://www.creativitstudios.com",
+                            "category": "design",
+                            "rounds": "1",
+                            "founded": "2012",
+                            "last_funded": "01-13"
+                        },
+                        {
+                            "name": "Company",
+                            "size": "1600000",
+                            "url": "http://www.welcometocompany.com",
+                            "category": "design",
+                            "rounds": "1",
+                            "founded": "",
+                            "last_funded": "08-11"
+                        },
+                        {
+                            "name": "See Me Group",
+                            "size": "3250000",
+                            "url": "http://see.me",
+                            "category": "design",
+                            "rounds": "2",
+                            "founded": "2007",
+                            "last_funded": "11-13"
+                        },
+                        {
+                            "name": "Artsy",
+                            "size": "7460000",
+                            "url": "http://artsy.net",
+                            "category": "design",
+                            "rounds": "4",
+                            "founded": "2009",
+                            "last_funded": "11-11"
+                        },
+                        {
+                            "name": "Kickstarter",
+                            "size": "10000000",
+                            "url": "http://www.kickstarter.com",
+                            "category": "design",
+                            "rounds": "1",
+                            "founded": "2009",
+                            "last_funded": "03-11"
+                        }
+                    ]
+                }]
+            }
+        ]
+    }
+
 var companies = {
     "name": "flare",
     "children": [
