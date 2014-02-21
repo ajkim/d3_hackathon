@@ -52,15 +52,15 @@ var svg = d3.select("body").append("svg")
       .transition()
       .duration(3000)
       .attr("r", function(d) { 
-        return d.r; 
-        console.log(this);})
-      .style("fill", function(d) { return color(d.packageName); })
-
-      // .on("mouseenter", function() { d3.select(self).attr("opacity", .5); })
-      // .on("mouseleave", function() { d3.select(self).attr("opacity", 1); })
+      // .on("mouseenter", function(d) { d3.select(self).attr("opacity", .5); })
+      // .on("mouseleave", function(d) { d3.select(self).attr("opacity", 1); })
       // .on('click', function(d) {
       //     document.location.href = d.url;
       // })
+        var please = this;
+        return d.r;
+      })
+      .style("fill", function(d) { return color(d.packageName); })
 
     // .attr("r", function(d) { return d.r; })
     // .style("fill", function(d) { return fill(d.packageName); })
@@ -69,6 +69,12 @@ var svg = d3.select("body").append("svg")
     // });
       ;
 
+      node.append
+      .on("mouseenter", function() { d3.select(please).attr("opacity", .5); })
+      .on("mouseleave", function() { d3.select(please).attr("opacity", 1); })
+      .on('click', function(d) {
+          document.location.href = d.url;
+      })
 
 
   node.append("text")
