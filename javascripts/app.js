@@ -49,18 +49,17 @@ var svg = d3.select("body").append("svg")
       { 
         return d.r;
       })
-<<<<<<< HEAD
       .style("fill", function(d) { return color(d.packageName); })
       ;
+
+      node.exit().remove();
 
 
   var renderText = function(){
       node.append("text")
-=======
       .style("fill", function(d) { return color(d.packageName); });
 
   node.append("text")
->>>>>>> f38418526ed58f73dede864287beeec5b3617d36
       .attr("dy", ".3em")
       .attr("opacity", 0)
       .style("text-anchor", "middle")
@@ -77,7 +76,6 @@ var svg = d3.select("body").append("svg")
       .style("z-index", "10")
       .style("visibility", "hidden")
       .text("hello");
-<<<<<<< HEAD
   
   }
 
@@ -86,9 +84,6 @@ var svg = d3.select("body").append("svg")
 }
       
 
-=======
-};
->>>>>>> f38418526ed58f73dede864287beeec5b3617d36
    
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
@@ -110,7 +105,7 @@ d3.select(self.frameElement).style("height", diameter + "px");
 dthreeFunc(companies);
 
 //need to run this function on submit:
-dthreeFunc(subCompaniesVariable(STRING FROM DROPDOWN));
+// dthreeFunc(subCompaniesVariable(STRING FROM DROPDOWN));
 
 function bindClickEvents(){
 d3.selectAll('node').selectAll(".node").on('mouseover', function(){
