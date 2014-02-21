@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>NYC TECH</title>
-  <link rel="stylesheet" href="stylesheets/styles.css">
-</head>
-
-
-<body>
-  
-  <script src="company_list.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-
 var diameter = 960,
     format = d3.format(",d"),
     color = d3.scale.category20();
@@ -39,8 +23,6 @@ var svg = d3.select("body").append("svg")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
-
-
   node.append("title")
       .text(function(d) { return d.className + ": " + format(d.value); });
       //transitioning radius from 0 to full here
@@ -51,34 +33,22 @@ var svg = d3.select("body").append("svg")
       .transition()
       .duration(3000)
       .attr("r", function(d) { 
-      // .on("mouseenter", function(d) { d3.select(self).attr("opacity", .5); })
-      // .on("mouseleave", function(d) { d3.select(self).attr("opacity", 1); })
+        return d.r; 
+        console.log(this);})
+      .style("fill", function(d) { return color(d.packageName); })
+
+      // .on("mouseenter", function() { d3.select(self).attr("opacity", .5); })
+      // .on("mouseleave", function() { d3.select(self).attr("opacity", 1); })
       // .on('click', function(d) {
       //     document.location.href = d.url;
       // })
-      var tooltip = d3.select("this")
-      .append("div")
-      .style("position", "absolute")
-      .style("z-index", "10")
-      .style("visibility", "hidden")
-      .text("a simple tooltip");
-        return d.r;
-      })
-      .style("fill", function(d) { return color(d.packageName); })
 
     // .attr("r", function(d) { return d.r; })
     // .style("fill", function(d) { return fill(d.packageName); })
     // .on("click", function(d) {
     //     document.location.href = d.url;
     // });
-    ;      
-      // .on("mouseenter", function() { d3.select(please).attr("opacity", .5); })
-      // .on("mouseleave", function() { d3.select(please).attr("opacity", 1); })
-      // .on('click', function(d) {
-      //     document.location.href = d.url;
-      // });
-
-
+      ;
 
   node.append("text")
       .attr("dy", ".3em")
@@ -89,10 +59,7 @@ var svg = d3.select("body").append("svg")
           document.location.href = d.url;
       })
       .text(function(d) { return d.className.substring(0, d.r / 3); })
-      // .transition()
-      // .duration(5000);
-}
-      ;
+};
 
 // Returns a flattened hierarchy containing all leaf nodes under the root.
 function classes(root) {
@@ -110,6 +77,7 @@ function classes(root) {
 
 d3.select(self.frameElement).style("height", diameter + "px");
 
+
 dthreeFunc(companies);
 
 function bindClickEvents(){
@@ -118,9 +86,3 @@ d3.selectAll('node').selectAll(".node").on('mouseover', function(){
 })
 };
 
-
-
-  <script src="http://d3js.org/d3.v3.min.js"></script>
-  <script src='javascripts/app.js'></script>
-
-</body>
