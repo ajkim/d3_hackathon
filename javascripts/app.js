@@ -107,6 +107,13 @@ d3.select(self.frameElement).style("height", diameter + "px");
 
 dthreeFunc(companies);
 
+function setSubIndustry(){    
+  var subCompaniesName = $('select').val()   
+  dthreeFunc(subCompaniesVariable(subCompaniesName));   
+  console.log(subCompaniesName) 
+}
+
+
 // svg.exit().remove();
 // dthreeFunc(testindustry);
 
